@@ -1,0 +1,22 @@
+{
+  "name": "webgl2computingbase",
+  "version": "1.0.0",
+  "description": "The simple WebGL2 float value computing sample.",
+  "main": "index.js",
+  "scripts": {
+    "test": "live-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astnohk/WebGL2ComputingBase.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/astnohk/WebGL2ComputingBase/issues"
+  },
+  "homepage": "https://github.com/astnohk/WebGL2ComputingBase#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
