@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width*2, initial-scale=0.5" />
+-->
+<title>WebGL FIR Filter</title>
+<style>
+body {
+	background-color: rgb(4,4,4);
+	white-space: nowrap;
+}
+
+#mainCanvas {
+	width: 800px;
+	height: 800px;
+}
+</style>
+<script type="application/ecmascript" src="src/main.js"></script>
+<script type="application/ecmascript" src="src/filter.js"></script>
+</head>
+<body>
+<div>
+	<input id="kernelSize" type="range" min="0" max="30" value="2">
+</div>
+<div>
+	<canvas id="mainCanvas"></canvas>
+	<img id="inputImage" src="" style="display: none">
+</div>
+</body>
+</html>
+
