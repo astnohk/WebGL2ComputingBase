@@ -15,15 +15,26 @@ function init()
 
 	initRange();
 	initDropFileHandler();
+
+    updateSigmaValue();
 }
 
 function initRange()
 {
-	const element = document.getElementById('sigmaRange');
-	element.addEventListener('change', () => {
-        document.getElementById('sigma').innerHTML = `&sigma;=${element.valueAsNumber}`;
-        updateTexture();
-    });
+	document.getElementById('sigmaRange').addEventListener(
+        'change',
+        () => {
+            updateSigmaValue();
+            updateTexture();
+        }
+    );
+}
+
+function updateSigmaValue()
+{
+    const e = document.getElementById('sigmaRange');
+    const kernelSize = e.valueAsNumber * 2 + 1;
+    document.getElementById('sigma').innerHTML = `&sigma;=${e.valueAsNumber}, kernel_size=${kernelSize}`;
 }
 
 function initDropFileHandler()
