@@ -33,7 +33,7 @@ function initRange()
 function updateSigmaValue()
 {
     const e = document.getElementById('sigmaRange');
-    const kernelSize = e.valueAsNumber * 2 + 1;
+    const kernelSize = 3 * e.valueAsNumber * 2 + 1;
     document.getElementById('sigma').innerHTML = `&sigma;=${e.valueAsNumber}, kernel_size=${kernelSize}`;
 }
 
