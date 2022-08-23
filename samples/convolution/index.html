@@ -14,6 +14,10 @@ body {
 	white-space: nowrap;
 }
 
+#sigma {
+    color: white;
+}
+
 #mainCanvas {
 	width: 800px;
 	height: 800px;
@@ -27,7 +31,7 @@ body {
 Drop the image file on this page.
 </div>
 <div>
-	<input id="kernelSize" type="range" min="0" max="30" value="2">
+	<input id="sigmaRange" type="range" min="0" max="30" value="2"><span id="sigma">&sigma;=2</span>
 </div>
 <div>
 	<canvas id="mainCanvas"></canvas>

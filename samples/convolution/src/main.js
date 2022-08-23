@@ -19,7 +19,11 @@ function init()
 
 function initRange()
 {
-	document.getElementById('kernelSize').addEventListener('change', updateTexture);
+	const element = document.getElementById('sigmaRange');
+	element.addEventListener('change', () => {
+        document.getElementById('sigma').innerHTML = `&sigma;=${element.valueAsNumber}`;
+        updateTexture();
+    });
 }
 
 function initDropFileHandler()
@@ -57,7 +61,7 @@ function updateTexture()
 {
 	// Update texture
 	const image = document.getElementById('inputImage');
-    const kernelSizeRange = document.getElementById('kernelSize');
-	filter.input(image, kernelSizeRange.valueAsNumber);
+    const sigmaRange = document.getElementById('sigmaRange');
+	filter.input(image, sigmaRange.valueAsNumber);
 }
 
