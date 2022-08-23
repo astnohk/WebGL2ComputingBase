@@ -44,7 +44,7 @@ void main(void) {
             sum_k += C;
 		}
 	}
-	fragmentColor = sum / sum_k;
+	fragmentColor = vec4(sum.rgb / sum_k, min(sum.a, 1.0));
 }`;
         this.gl = this.canvas.getContext('webgl2');
         // Enable FLOAT-type in framebuffer's color
@@ -149,7 +149,7 @@ void main(void) {
         gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
 
         // Clear
-        gl.clearColor(0.0, 0.0, 0.0, 1.0);
+        gl.clearColor(0.0, 0.0, 0.0, 0.0);
         gl.clearDepth(1.0);
         gl.enable(gl.DEPTH_TEST);
         gl.enable(gl.BLEND);
